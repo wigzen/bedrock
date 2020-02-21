@@ -1425,7 +1425,7 @@ CSP_IMG_SRC = CSP_DEFAULT_SRC + [
     'creativecommons.org',
     'cdn-3.convertexperiments.com',
     'logs.convertexperiments.com',
-    'firefox.coral.coralproject.net/',
+    'firefox.coral.coralproject.net',
 ]
 CSP_SCRIPT_SRC = CSP_DEFAULT_SRC + [
     # TODO fix things so that we don't need this
@@ -1443,7 +1443,7 @@ CSP_SCRIPT_SRC = CSP_DEFAULT_SRC + [
     'data.track.convertexperiments.com',
     '1003350.track.convertexperiments.com',
     '1003343.track.convertexperiments.com',
-    'firefox.coral.coralproject.net/',
+    'firefox.coral.coralproject.net',
 ]
 CSP_STYLE_SRC = CSP_DEFAULT_SRC + [
     # TODO fix things so that we don't need this
@@ -1459,7 +1459,7 @@ CSP_CHILD_SRC = [
     'accounts.firefox.com',
     'accounts.firefox.com.cn',
     'www.youtube.com',
-    'firefox.coral.coralproject.net/',
+    'firefox.coral.coralproject.net',
 ]
 CSP_CONNECT_SRC = CSP_DEFAULT_SRC + [
     'www.googletagmanager.com',
@@ -1467,7 +1467,7 @@ CSP_CONNECT_SRC = CSP_DEFAULT_SRC + [
     'logs.convertexperiments.com',
     FXA_ENDPOINT,
     FXA_ENDPOINT_MOZILLAONLINE,
-    'firefox.coral.coralproject.net/',
+    'firefox.coral.coralproject.net',
 ]
 CSP_REPORT_ONLY = config('CSP_REPORT_ONLY', default='false', parser=bool)
 CSP_REPORT_ENABLE = config('CSP_REPORT_ENABLE', default='false', parser=bool)

@@ -24,6 +24,14 @@
 
 {% block content %}
 <main class="mzp-t-firefox">
+
+  {% call hero(
+    title='This election, the web needs your vote and your choice',
+    class='mzp-has-image mzp-t-firefox',
+    heading_level=1,
+    ) %}
+  {% endcall %}
+
   <div class="mzp-l-content">
     <div id="coral_thread"></div>
     <script type="text/javascript">
