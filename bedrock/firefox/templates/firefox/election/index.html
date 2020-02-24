@@ -2,7 +2,7 @@
  # License, v. 2.0. If a copy of the MPL was not distributed with this
  # file, You can obtain one at http://mozilla.org/MPL/2.0/. #}
 
-{% from "macros-protocol.html" import hero, content_card with context %}
+{% from "macros-protocol.html" import hero, card %}
 
 {% extends "firefox/base/base-protocol.html" %}
 
@@ -24,39 +24,62 @@
 
 {% block content %}
 <main class="mzp-t-firefox">
-
-  {% call hero(
-    title='This election, the web needs your vote and your choice',
-    class='mzp-has-image mzp-t-firefox',
-    heading_level=1,
-    ) %}
-  {% endcall %}
-
   <div class="mzp-l-content">
-    <div id="coral_thread"></div>
-    <script type="text/javascript">
-      (function() {
-          var d = document, s = d.createElement('script');
-          s.src = 'https://firefox.coral.coralproject.net/assets/js/embed.js';
-          s.async = false;
-          s.defer = true;
-          s.onload = function() {
-              Coral.createStreamEmbed({
-                  id: "coral_thread",
-                  autoRender: true,
-                  rootURL: 'https://firefox.coral.coralproject.net',
-                  // Uncomment these lines and replace with the ID of the
-                  // story's ID and URL from your CMS to provide the
-                  // tightest integration. Refer to our documentation at
-                  // https://docs.coralproject.net for all the configuration
-                  // options.
-                  // storyID: '${storyID}',
-                  // storyURL: '${storyURL}',
-              });
-          };
-          (d.head || d.body).appendChild(s);
-      })();
-    </script>
+    <h1>Elections TKTK</h1>
+    <div class="mzp-l-card-half">
+      {{ card(
+          class='mzp-c-card-medium',
+          title=_('Are tech issues important to you in this election?'),
+          ga_title='Tech issues',
+          desc=_('In one of the most consequential elections we’ve seen in decades, tech hasn’t come up much. We are asking you to help change that.'),
+          image_url='img/firefox/election/placeholder.jpg',
+          include_highres_image=True,
+          aspect_ratio='mzp-has-aspect-16-9',
+          link_url=url('firefox.election.questions')
+      )}}
+      {{ card(
+        class='mzp-c-card-medium',
+        title=_('Turbovote'),
+        ga_title='Vote',
+        desc=_('TKTK'),
+        image_url='img/firefox/election/placeholder.jpg',
+        include_highres_image=True,
+        aspect_ratio='mzp-has-aspect-16-9',
+        link_url=url('firefox.election.questions')
+    )}}
+    </div>
+    <div class="mzp-l-card-third">
+      {{ card(
+          class='mzp-c-card-medium',
+          title=_('What to Expect When You’re Electing'),
+          ga_title='IRL',
+          desc=_('Examine how the internet is changing our minds, our votes, and our democracies – all over the world.'),
+          image_url='img/firefox/election/irl.jpg',
+          include_highres_image=True,
+          aspect_ratio='mzp-has-aspect-16-9',
+          link_url='https://irlpodcast.org/season3/episode7/'
+      )}}
+      {{ card(
+        class='mzp-c-card-medium',
+        title=_('5 things you can do to counter misinformation'),
+        ga_title='misinformation',
+        desc=_('We had hope that the internet would enable more accountability, openness, and trust in government. What many did not expect was the amount of misinformation.'),
+        image_url='img/firefox/election/misinfo.jpg',
+        include_highres_image=True,
+        aspect_ratio='mzp-has-aspect-16-9',
+        link_url='https://blog.mozilla.org/internetcitizen/2018/10/04/5-things-you-can-do-to-counter-misinformation/'
+      )}}
+      {{ card(
+        class='mzp-c-card-medium',
+        title=_('What is microtargeting and what is it doing in our politics?'),
+        ga_title='microtargeting',
+        desc=_('Microtargeting is a marketing strategy that uses people’s data to segment them into small groups for content targeting.'),
+        image_url='img/firefox/election/micro.jpg',
+        include_highres_image=True,
+        aspect_ratio='mzp-has-aspect-16-9',
+        link_url='https://blog.mozilla.org/internetcitizen/2018/10/04/microtargeting-dipayan-ghosh/'
+      )}}
+    </div>
   </div>
 
 </main>
