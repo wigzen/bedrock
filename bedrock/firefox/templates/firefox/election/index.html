@@ -24,60 +24,82 @@
 
 {% block content %}
 <main class="mzp-t-firefox">
+  {% call hero(
+    title='Are tech issues important to you in this election?',
+    desc='Below you can ask the candidates a question, and click to upvote questions you like. Those that attract the most votes, we may share with the candidates after March 3 (Super Tuesday).',
+    class='mzp-t-firefox mzp-has-image',
+    heading_level=1,
+    ) %}
+  {% endcall %}
+
   <div class="mzp-l-content">
-    <h1>Elections TKTK</h1>
-    <div class="mzp-l-card-half">
+    <div id="coral_thread"></div>
+    <script type="text/javascript">
+      (function() {
+          var d = document, s = d.createElement('script');
+          s.src = 'https://firefox.coral.coralproject.net/assets/js/embed.js';
+          s.async = false;
+          s.defer = true;
+          s.onload = function() {
+              Coral.createStreamEmbed({
+                  id: "coral_thread",
+                  autoRender: true,
+                  rootURL: 'https://firefox.coral.coralproject.net',
+                  // Uncomment these lines and replace with the ID of the
+                  // story's ID and URL from your CMS to provide the
+                  // tightest integration. Refer to our documentation at
+                  // https://docs.coralproject.net for all the configuration
+                  // options.
+                  // storyID: '${storyID}',
+                  // storyURL: '${storyURL}',
+              });
+          };
+          (d.head || d.body).appendChild(s);
+      })();
+    </script>
+  </div>
+
+  <div class="mzp-l-content">
+    <div class="mzp-l-card-quarter">
       {{ card(
-          class='mzp-c-card-medium',
-          title=_('Are tech issues important to you in this election?'),
-          ga_title='Tech issues',
-          desc=_('In one of the most consequential elections we’ve seen in decades, tech hasn’t come up much. We are asking you to help change that.'),
-          image_url='img/firefox/election/placeholder.jpg',
-          include_highres_image=True,
-          aspect_ratio='mzp-has-aspect-16-9',
-          link_url=url('firefox.election.questions')
-      )}}
-      {{ card(
-        class='mzp-c-card-medium',
-        title=_('Turbovote'),
-        ga_title='Vote',
-        desc=_('TKTK'),
-        image_url='img/firefox/election/placeholder.jpg',
+        class='mzp-c-card-small',
+        title=_('What to Expect When You’re Electing'),
+        ga_title='IRL',
+        desc=_('Examine how the internet is changing our minds, our votes, and our democracies – all over the world.'),
+        image_url='img/firefox/election/irl.jpg',
         include_highres_image=True,
         aspect_ratio='mzp-has-aspect-16-9',
-        link_url=url('firefox.election.questions')
-    )}}
-    </div>
-    <div class="mzp-l-card-third">
-      {{ card(
-          class='mzp-c-card-medium',
-          title=_('What to Expect When You’re Electing'),
-          ga_title='IRL',
-          desc=_('Examine how the internet is changing our minds, our votes, and our democracies – all over the world.'),
-          image_url='img/firefox/election/irl.jpg',
-          include_highres_image=True,
-          aspect_ratio='mzp-has-aspect-16-9',
-          link_url='https://irlpodcast.org/season3/episode7/'
+        link_url='https://irlpodcast.org/season3/episode7/?utm_source=www.mozilla.org&utm_medium=referral&utm_campaign=election&utm_content=card'
       )}}
       {{ card(
-        class='mzp-c-card-medium',
-        title=_('5 things you can do to counter misinformation'),
-        ga_title='misinformation',
-        desc=_('We had hope that the internet would enable more accountability, openness, and trust in government. What many did not expect was the amount of misinformation.'),
-        image_url='img/firefox/election/misinfo.jpg',
+        class='mzp-c-card-small',
+        title=_('How you can take control against online tracking'),
+        ga_title='tracking',
+        desc=_('Your preferences, online actions and purchases can be used to show you content which is intended to convey a very specific point of view and persuade you.'),
+        image_url='img/firefox/election/tracking.png',
         include_highres_image=True,
         aspect_ratio='mzp-has-aspect-16-9',
-        link_url='https://blog.mozilla.org/internetcitizen/2018/10/04/5-things-you-can-do-to-counter-misinformation/'
+        link_url='https://blog.mozilla.org/firefox/take-control-against-online-tracking/?utm_source=www.mozilla.org&utm_medium=referral&utm_campaign=election&utm_content=card'
       )}}
       {{ card(
-        class='mzp-c-card-medium',
-        title=_('What is microtargeting and what is it doing in our politics?'),
-        ga_title='microtargeting',
-        desc=_('Microtargeting is a marketing strategy that uses people’s data to segment them into small groups for content targeting.'),
-        image_url='img/firefox/election/micro.jpg',
+        class='mzp-c-card-small',
+        title=_('Keep Facebook contained'),
+        ga_title='container',
+        desc=_('Prevent Facebook from tracking you across the web with our Facebook Container extension.'),
+        image_url='img/firefox/election/contain.png',
         include_highres_image=True,
         aspect_ratio='mzp-has-aspect-16-9',
-        link_url='https://blog.mozilla.org/internetcitizen/2018/10/04/microtargeting-dipayan-ghosh/'
+        link_url='https://addons.mozilla.org/en-US/firefox/addon/facebook-container/?utm_source=www.mozilla.org&utm_medium=referral&utm_campaign=election&utm_content=card'
+      )}}
+      {{ card(
+        class='mzp-c-card-small',
+        title=_('Control trackers your own way with Enhanced Tracking Protection from Firefox'),
+        ga_title='etp',
+        desc=_('We’re all tired of that uneasy feeling we get when we see an ad online that seems to know too much about us.'),
+        image_url='img/firefox/election/etp.png',
+        include_highres_image=True,
+        aspect_ratio='mzp-has-aspect-16-9',
+        link_url='https://blog.mozilla.org/firefox/control-trackers-with-firefox/?utm_source=www.mozilla.org&utm_medium=referral&utm_campaign=election&utm_content=card'
       )}}
     </div>
   </div>

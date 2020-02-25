@@ -1,9 +1,9 @@
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this
-// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+// file, You can obtain one at http: //mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path:  '/media/fonts';
+$image-path:  '/media/protocol/img';
 
 @import "../../protocol/css/includes/lib";
 @import '../../protocol/css/templates/card-layout';
@@ -12,33 +12,129 @@ $image-path: '/media/protocol/img';
 
 
 // .mzp-c-hero-title {
-//     background-image: url('/media/protocol/img/logos/firefox/browser/logo-word-hor-md.png');
-//     background-size: auto 32px;
-//     background-repeat: no-repeat;
-//     background-position: top left;
-//     padding-top: $layout-lg;
+//     background-image:  url('/media/protocol/img/logos/firefox/browser/logo-word-hor-md.png');
+//     background-size:  auto 32px;
+//     background-repeat:  no-repeat;
+//     background-position:  top left;
+//     padding-top:  $layout-lg;
 // }
 
 //* -------------------------------------------------------------------------- */
 // YouTube iframe responsive in modal.
 
 .ytcontainer-video {
-    max-width: 100%;
+    max-width:  100%;
 
     .video-container {
-        height: 0;
+        height:  0;
         margin-bottom: $spacing-lg;
-        overflow: hidden;
-        padding-bottom: 56.25%;
-        position: relative;
-        width: 100%;
+        overflow:  hidden;
+        padding-bottom:  56.25%;
+        position:  relative;
+        width:  100%;
     }
 
     iframe {
-        height: 100%;
-        left: 0;
-        position: absolute;
-        top:0;
-        width: 100%;
+        height:  100%;
+        left:  0;
+        position:  absolute;
+        top: 0;
+        width:  100%;
     }
 }
+
+
+/* coral */
+
+@at-root .coral {
+    --elevation-main: 1px 0px 4px rgba(0,0,0,0.25);
+    --palette-primary-darkest: #003489;
+    --palette-primary-dark: #0b4eba;
+    --palette-primary-main: #{$color-link};
+    --palette-primary-light: #437fe1;
+    --palette-primary-lighter: #91B6F0;
+    --palette-primary-lightest: #dfedff;
+    --palette-grey-darkest: #{$color-gray-60};
+    --palette-grey-dark: #{$color-gray-50};
+    --palette-grey-main: #{$color-gray-40};
+    --palette-grey-light: #{$color-gray-30};
+    --palette-grey-lighter: #{$color-gray-20};
+    --palette-grey-lightest: #{$color-gray-10};
+    --palette-success-darkest: #{$color-green-60};
+    --palette-success-dark: #{$color-green-50};
+    --palette-success-main: #{$color-green-40};
+    --palette-success-light: #{$color-green-30};
+    --palette-success-lighter: #{$color-green-20};
+    --palette-success-lightest: #{$color-green-10};
+    --palette-error-darkest: #D70022;
+    --palette-error-dark: #{$color-red-50};
+    --palette-error-main: #{$color-red-40};
+    --palette-error-light: #{$color-red-30};
+    --palette-error-lighter: #{$color-red-20};
+    --palette-error-lightest: #{$color-red-10};
+    --palette-warning-main: #D7B600;
+    --palette-text-primary: #{$color-off-black};
+    --palette-text-secondary: #{$color-gray-70};
+    --palette-text-light: #fff;
+    --palette-text-dark: #14171a;
+    --palette-background-light: #f6f6f6;
+    --palette-common-white: #fff;
+    --palette-common-black: #000;
+    --palette-divider: rgba(0,0,0,0.12);
+    --palette-highlight: #ffd863;
+    --palette-brand-main: #{$color-orange-40};
+    --palette-brand-light: #{$color-orange-30};
+    --palette-brand-lighter: #{$color-orange-20};
+    --mini-unit-small: 4;
+    --mini-unit-large: 8;
+    --round-corners: 2px;
+    --rem-base: 16;
+    --font-family-sans-serif:  Inter, sans-serif;
+    --font-family-serif:  Inter, sans-serif;
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 600;
+    --font-weight-bold: 700;
+    --font-size-1: 12px;
+    --font-size-2: 14px;
+    --font-size-3: 16px;
+    --font-size-4: 18px;
+    --font-size-5: 20px;
+    --font-size-6: 24px;
+    --font-size-7: 28px;
+    --font-size-8: 32px;
+    --font-size-rem-1: 0.75rem;
+    --font-size-rem-2: 0.875rem;
+    --font-size-rem-3: 1rem;
+    --font-size-rem-4: 1.125rem;
+    --font-size-rem-5: 1.25rem;
+    --font-size-rem-6: 1.5rem;
+    --font-size-rem-7: 1.75rem;
+    --font-size-rem-8: 2rem;
+    --line-height-1: 1.1;
+    --line-height-2: 1.1;
+    --line-height-3: 1.5;
+    --line-height-body-short: 1.142;
+    --breakpoints-xs: 320;
+    --breakpoints-sm: 640;
+    --breakpoints-md: 1024;
+    --breakpoints-lg: 1400;
+    --breakpoints-xl: 1600;
+    --zindex-popover: 300;
+    --zindex-modal: 1000;
+    --spacing-1: 4px;
+    --spacing-2: 8px;
+    --spacing-3: 12px;
+    --spacing-4: 16px;
+    --spacing-5: 24px;
+    --spacing-6: 32px;
+    --spacing-7: 44px;
+    --spacing-8: 60px;
+    --spacing-9: 84px;
+    --mini-unit: calc(1px*var(--mini-unit-small))
+   }
+   @media (min-width: 320px) {
+    :root {
+     --mini-unit: calc(1px*var(--mini-unit-large))
+    }
+   }
