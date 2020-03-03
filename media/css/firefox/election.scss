@@ -8,23 +8,18 @@ $image-path:  '/media/protocol/img';
 @import "../../protocol/css/includes/lib";
 @import '../../protocol/css/templates/card-layout';
 @import '../../protocol/css/components/hero';
-@import '../../protocol/css/components/modal';
 
+.t-election {
+    padding-bottom: 0;
 
-// .mzp-c-hero-title {
-//     background-image:  url('/media/protocol/img/logos/firefox/browser/logo-word-hor-md.png');
-//     background-size:  auto 32px;
-//     background-repeat:  no-repeat;
-//     background-position:  top left;
-//     padding-top:  $layout-lg;
-// }
-
-.mzp-c-hero-desc {
-    &,
-    p {
-        margin-bottom: 0;
+    .mzp-l-content {
+        padding-bottom: 0;
+        padding-top: 0;
     }
 
+    .mzp-c-hero-body {
+        padding-bottom: $layout-md;
+    }
 }
 
 /* coral */
