@@ -8,6 +8,7 @@ from django.shortcuts import render as django_render
 from django.views.decorators.http import require_safe
 from django.views.generic import TemplateView
 from lib import l10n_utils
+from lib.l10n_utils import L10nTemplateView
 
 from bedrock.contentcards.models import get_page_content_cards
 from bedrock.mozorg.credits import CreditsFile
@@ -141,3 +142,14 @@ def home_view(request):
         template_name = 'mozorg/home/home.html'
 
     return l10n_utils.render(request, template_name, ctx)
+
+
+def contribute(request):
+    locale = l10n_utils.get_locale(request)
+
+    if locale.startswith('en-'):
+        template = 'mozorg/contribute/contribute-2020.html'
+    else:
+        template = 'mozorg/contribute/index.html'
+    return l10n_utils.render(request, template)
+
